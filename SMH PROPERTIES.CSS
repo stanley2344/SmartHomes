@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Libre+Baskerville&display=swap');
+/*font-family: 'EB Garamond', serif;
+font-family: 'Libre Baskerville', serif;*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'EB Garamond', serif;
+}
+h1{
+    font-family: 'Libre Baskerville', serif;
+}
+
+/* Style the sticky header */
+.sticky-header {
+    background: linear-gradient(to right, #c4661f, #1d78aa, rgb(20, 66, 134), lightblue);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100; /* Ensure the header stays on top of other content */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 20px;
+    background-color: rgba(51, 51, 51, 0.831);
+    color: #fff;
+}
+
+/* Style the logo */
+.logo h1 {
+    font-family: 'Lobster', sans-serif;
+    font-size: 1.5rem; /* Increase font size for better readability */
+}
+
+/* Style the logo icon */
+.logo-icon {
+    font-size: 1.5rem;
+    color: whitesmoke;
+}
+
+/* Style the navigation menu */
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 0.8rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ff9900;
+}
+
+a:visited {
+    color: #ffffff;
+}
+
+/* Style the "Contact Us" button */
+.contact-button {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+}
+
+.contact-button:hover {
+    background-color: #FF8956;
+    color: #fff;
+    box-shadow: inset 0 0 0 4px #FF5733;
+}
+
+/* Style the page content */
+.content {
+    padding-top: 80px; /* Adjust to match the header's height */
+}
+
+/* Media queries for responsiveness */
+
+/* Media query for smaller screens */
+
+@media screen and (max-width: 768px) {
+    .sticky-header {
+        position: static; /* Remove fixed positioning */
+    }
+
+    .logo h1 {
+        font-size: 1rem;
+        white-space: nowrap;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+}
+
+
+
+
+
+
+/*properties section*/
+.property-section{
+    /*border: 9px solid orange;*/
+    background-color: #f7f7f7;
+    padding-bottom: 2rem;
+} 
+
+.propeties-article {
+    padding: 2rem 1rem;
+    text-align: center;
+    /* border: 3px solid blue; */
+}
+.propeties-article h1{
+    margin-top: 50px;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    /* border: 2px solid red; */
+}
+
+
+.propeties-article p{
+    /* border: 5px solid aqua; */
+    font-family: 'EB Garamond', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #525252;
+    line-height: 1.2;
+    padding: 0 1rem;
+    margin: 0 ;
+    letter-spacing: 1px;
+}
+
+/*grid for properties*/
+
+.grid-box{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+   /* height: 100vh;*/
+    margin: 0;
+    /* border: 6px solid rgb(68, 18, 26); */
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* 2 equal-width columns */
+    grid-template-rows: repeat(6, 1fr);   /* 6 equal-height rows */
+    gap: 1.5rem; /* Add some gap between grid items */
+    width: 70rem; /* Adjust the width as needed */
+}
+
+.grid-item {
+    display: flex;
+    box-shadow: inset -4px -2px 10px #d1d5db;
+    border-radius: 10px;
+    padding: 10px;
+    background-color:#f8fafc;
+    text-align: left;
+    align-items: auto;
+}
+.grid-item .property-img{
+    flex: 0 0 50%; /* Takes up 50% of the available space, fixed width */
+    max-width: 50%; /* Prevents the image from growing beyond 50% */
+    height: auto; /* Maintains aspect ratio */
+    max-height: 100%;
+    border-radius: 9px 0 0px 9px;
+    margin-right: 1rem;
+
+}
+
+.grid-item .property-details {
+    flex: 1; /* Takes up the remaining available space */
+    padding: 0px; /* Add padding to the details container */
+    
+}
+
+ .property-address{
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.property-icon-box{
+    display: flex;
+    flex-direction: row;
+    color: #6b7280;
+    font-size: small;
+}
+
+.property-icon i{
+    padding-bottom:0.8rem;
+}
+
+.price{
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #1e40af;
+}
+
+.price del{
+    font-size: 1rem;
+    margin-left: 1rem;
+    color: #9ca3af;
+}
+
+
+@media (min-width: 768px) {
+    .propeties-article {
+        padding: 5rem 5rem 3rem; /* Restore padding for larger screens */
+    }
+    
+    .propeties-article h1 {
+        font-size: 3rem; /* Restore font size for headings on larger screens */
+    }
+    
+    .propeties-article p {
+        font-size: 1.3rem; /* Restore font size for paragraphs on larger screens */
+        padding: 0 ; /* Restore horizontal padding for paragraphs on larger screens */
+        margin: 0 ; /* Restore margin for paragraphs on larger screens */
+    }
+
+    .grid-container{
+        grid-template-columns: 1fr 1fr;
+        
+    }
+
+    .grid-item {
+        flex-direction: row; /* Restore horizontal layout for larger screens */
+        padding: 10px;
+    }
+
+    .grid-item .property-img {
+        flex: 0 0 50%; /* Takes up 50% of the available space, fixed width */
+        max-width: 50%; /* Prevents the image from growing beyond 50% */
+        border-radius: 10px 0 0 10px; /* Rounded corners for the left side of the image */
+    }
+
+    .property-details {
+        flex: 1; /* Takes up the remaining available space */
+        padding: 0px; /* Add padding to the details container */
+        margin: 0 0.8rem; /* Add some spacing between elements */
+    }
+
+    .property-address {
+        font-size: 1.2rem; /* Restore font size for larger screens */
+        margin-bottom: 1rem;
+    }
+
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-menu {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.footer-menu li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.footer-menu li:last-child {
+    margin-right: 0;
+}
+
+.footer-menu a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer-menu :hover{
+    text-decoration: none;
+    color: #ff9900;
+}
+
+.footer-menu:visited{
+    color: #e74744;
+    text-decoration: none;
+}
+
+.footer-address {
+    text-align: center;
+    flex-grow: 1;
+    margin-bottom: 1rem;
+}
+
+.footer-social-media {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-social-media li a {
+    margin: 0 10px;
+    color: white;
+}
+
+.footer-copyright {
+    margin-top: 20px;
+}
+
+.back-to-top {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #1255ba;
+}
+
+
+/* Define social media icons if using FontAwesome or other icon libraries */
+.footer-social-media i {
+    font-size: 20px;
+}
+
+/* Styling for links when hovered */
+.footer-menu a:hover, .back-to-top:hover {
+    text-decoration: none;
+}
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .footer-menu {
+        text-align: center;
+    }
+
+    .footer-social-media {
+        text-align: center;
+    }
+}
